@@ -4,7 +4,7 @@ package Linked_List;
 
 class ListNode {
     int val;
-    ListNode next;
+    Node next;
 
     ListNode(int val) {
         this.val = val;
@@ -14,14 +14,14 @@ class ListNode {
 
 public class LL_04 {
 
-    public ListNode ReverseLL(ListNode head) {
+    public Node ReverseLL(Node head) {
 
-        ListNode prev = null;
-        ListNode curr = head;
+        Node prev = null;
+        Node curr = head;
 
         while (curr != null) {
 
-            ListNode nextNode = curr.next;
+            Node nextNode = curr.next;
             curr.next = prev;
             prev = curr;
             curr = nextNode;
@@ -33,14 +33,14 @@ public class LL_04 {
     public static void main(String[] args) {
 
         // Create linked list: 1 -> 2 -> 3 -> 4
-        ListNode head = new ListNode(1);
-        head.next = new ListNode(2);
-        head.next.next = new ListNode(3);
-        head.next.next.next = new ListNode(4);
+        Node head = new Node(1);
+        head.next = new Node(2);
+        head.next.next = new Node(3);
+        head.next.next.next = new Node(4);
 
         // Print original list
         System.out.println("Original Linked List:");
-        ListNode temp = head;
+        Node temp = head;
         while (temp != null) {
             System.out.print(temp.val + " ");
             temp = temp.next;
