@@ -21,12 +21,10 @@ public class LL_06 {
         if(n == size){
             return head.next;
         }
-        int idxSearch=size-n-1;
+        int idxSearch = size - n;
         Node prev = head;
-        int i=0;
-        while(i<idxSearch-1){
-            prev=prev.next;
-            i++;
+        for (int i = 1; i < idxSearch; i++) {
+            prev = prev.next;
         }
         prev.next=prev.next.next;
         return head;
