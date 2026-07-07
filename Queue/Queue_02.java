@@ -21,6 +21,8 @@ public class Queue_02 {
 
     }    
 }
+// Operations are same as arraydeque and Linked list
+
 // import java.util.ArrayDeque;
 // import java.util.Queue;
 
